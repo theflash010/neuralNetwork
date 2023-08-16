@@ -1,0 +1,7 @@
+import imageio
+img_array = imageio.v2.imread("E:\six.png", as_gray=True)
+img_data=255.0-img_array.reshape(784)
+img_data=(img_data/255.0*0.99)+0.01
+outputs=n.query(img_data)
+label=numpy.argmax(outputs)
+print(label,"network's answer")
